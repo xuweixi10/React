@@ -24,8 +24,8 @@ TODO: Add long description of the pod here.
   s.homepage         = 'https://github.com/40662756/React'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { '40662756' => '1719439540@qq.com' }
-  s.source           = { :git => 'https://github.com/40662756/React.git', :tag => s.version.to_s }
+  s.author           = { 'xuweixi10' => '1719439540@qq.com' }
+  s.source           = { :git => 'https://github.com/xuweixi10/React.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '10.0'
