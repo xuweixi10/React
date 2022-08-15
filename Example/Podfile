@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '10.0'
+
+target 'React_Example' do
+  pod 'React', :path => '../'
+
+  target 'React_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
