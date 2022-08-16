@@ -1,10 +1,15 @@
 use_frameworks!
 
-platform :ios, '10.0'
+platform :ios, '13.0'
 
 target 'React_Example' do
-  pod 'React', :path => '../'
-
+  pod 'React',:path => '../'
+  pod 'React-jsi', :path => '/Users/xuweixi/Desktop/program/localPods/React-jsi'
+  pod 'React-jsinspector', :path => '/Users/xuweixi/Desktop/program/localPods/React-jsinspector'
+  
+  pod 'React-perflogger', :path => '/Users/xuweixi/Desktop/program/ReactNative/FastXRN/node_modules/react-native/ReactCommon/reactperflogger'
+#  pod 'React', :git => 'https://github.com/xuweixi10/React.git'
+  pod 'Yoga' , '1.14.0'
   target 'React_Tests' do
     inherit! :search_paths
 
