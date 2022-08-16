@@ -7,12 +7,15 @@
 //
 
 #import "RCTAppDelegate.h"
-
+#import "RCTViewController.h"
 @implementation RCTAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    [self.window makeKeyAndVisible];
+    RCTViewController *viewController = [[RCTViewController alloc]init];
+    self.window.rootViewController = viewController;
     return YES;
 }
 

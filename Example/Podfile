@@ -1,13 +1,47 @@
 use_frameworks!
-
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['ENABLE_BITCODE'] = 'NO'
+    end
+  end
+end
 platform :ios, '13.0'
-
+dir = '/Users/xuweixi/Desktop/program/ReactNative/FastXRN'
 target 'React_Example' do
-  pod 'React',:path => '../'
+  pod 'React-Core',:path => '../'
   pod 'React-jsi', :path => '/Users/xuweixi/Desktop/program/localPods/React-jsi'
   pod 'React-jsinspector', :path => '/Users/xuweixi/Desktop/program/localPods/React-jsinspector'
-  
+  pod 'React-cxxreact', :path => '/Users/xuweixi/Desktop/program/ReactNative/FastXRN/node_modules/react-native/ReactCommon/cxxreact'
+  pod 'RCT-Folly', :podspec => '/Users/xuweixi/Desktop/program/ReactNative/FastXRN/node_modules/react-native/third-party-podspecs/RCT-Folly.podspec'
   pod 'React-perflogger', :path => '/Users/xuweixi/Desktop/program/ReactNative/FastXRN/node_modules/react-native/ReactCommon/reactperflogger'
+  
+  pod 'React-callinvoker',:path => '/Users/xuweixi/Desktop/program/ReactNative/FastXRN/node_modules/react-native/ReactCommon/callinvoker'
+  pod 'React-runtimeexecutor',:path => '/Users/xuweixi/Desktop/program/ReactNative/FastXRN/node_modules/react-native/ReactCommon/runtimeexecutor'
+  pod 'React-logger',:path=>'/Users/xuweixi/Desktop/program/ReactNative/FastXRN/node_modules/react-native/ReactCommon/logger'
+  pod 'React-bridging',:path=>'/Users/xuweixi/Desktop/program/ReactNative/FastXRN/node_modules/react-native/ReactCommon'
+  pod 'React-CoreModules', :path => '/Users/xuweixi/Desktop/program/ReactNative/FastXRN/node_modules/react-native/React/CoreModules'
+  pod 'React-Codegen',:path => '/Users/xuweixi/Desktop/program/ReactNative/FastXRN/ios/build/generated/ios'
+  pod 'RCTTypeSafety', :path => "/Users/xuweixi/Desktop/program/ReactNative/FastXRN/node_modules/react-native/Libraries/TypeSafety"
+  pod 'FBReactNativeSpec', :path => "/Users/xuweixi/Desktop/program/ReactNative/FastXRN/node_modules/react-native/React/FBReactNativeSpec"
+  pod 'FBLazyVector', :path => '/Users/xuweixi/Desktop/program/ReactNative/FastXRN/node_modules/react-native/Libraries/FBLazyVector'
+  pod 'React-jsiexecutor', :path => '/Users/xuweixi/Desktop/program/ReactNative/FastXRN/node_modules/react-native/ReactCommon/jsiexecutor'
+  pod 'RCTRequired', :path => "/Users/xuweixi/Desktop/program/ReactNative/FastXRN/node_modules/react-native/Libraries/RCTRequired"
+  pod 'ReactCommon/turbomodule/core', :path => '/Users/xuweixi/Desktop/program/ReactNative/FastXRN/node_modules/react-native/ReactCommon'
+  
+  
+  pod 'React-RCTActionSheet', :path => '/Users/xuweixi/Desktop/program/ReactNative/FastXRN/node_modules/react-native/Libraries/ActionSheetIOS'
+  pod 'React-RCTAnimation', :path => '/Users/xuweixi/Desktop/program/ReactNative/FastXRN/node_modules/react-native/Libraries/NativeAnimation'
+  pod 'React-RCTBlob', :path => '/Users/xuweixi/Desktop/program/ReactNative/FastXRN/node_modules/react-native/Libraries/Blob'
+  pod 'React-RCTImage', :path => '/Users/xuweixi/Desktop/program/ReactNative/FastXRN/node_modules/react-native/Libraries/Image'
+  pod 'React-RCTLinking', :path => '/Users/xuweixi/Desktop/program/ReactNative/FastXRN/node_modules/react-native/Libraries/LinkingIOS'
+  pod 'React-RCTNetwork', :path => '/Users/xuweixi/Desktop/program/ReactNative/FastXRN/node_modules/react-native/Libraries/Network'
+  pod 'React-RCTSettings', :path => '/Users/xuweixi/Desktop/program/ReactNative/FastXRN/node_modules/react-native/Libraries/Settings'
+  pod 'React-RCTText', :path => '/Users/xuweixi/Desktop/program/ReactNative/FastXRN/node_modules/react-native/Libraries/Text'
+  pod 'React-RCTVibration', :path => '/Users/xuweixi/Desktop/program/ReactNative/FastXRN/node_modules/react-native/Libraries/Vibration'
+  
+  pod 'boost',:podspec => '/Users/xuweixi/Desktop/program/ReactNative/FastXRN/node_modules/react-native/third-party-podspecs/boost.podspec'
+  pod 'DoubleConversion', :podspec => '/Users/xuweixi/Desktop/program/ReactNative/FastXRN/node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
 #  pod 'React', :git => 'https://github.com/xuweixi10/React.git'
   pod 'Yoga' , '1.14.0'
   target 'React_Tests' do
